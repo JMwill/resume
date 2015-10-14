@@ -18,12 +18,6 @@ $(function() {
 		animationEasing: 'easeOutBounce',
 		responsive: true,
 		scaleLabel: '<%=value + "%"%>',
-		scaleOverride: true,
-		scaleStartValue: 0,
-		scaleSteps: 10,
-		scaleStepWidth: 10,
-		// barValueSpacing : 100,
-		barDatasetSpacing: 9,
 		tooltipTemplate: '<%if (label){%><%=label%>: <%}%><%= value + "%" %>'
 	});
 });
