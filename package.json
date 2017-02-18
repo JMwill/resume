@@ -1,47 +1,44 @@
 {
-  "private": true,
-  "engines": {
-    "node": ">=0.12.0"
+  "name": "resume",
+  "version": "0.0.0",
+  "description": "Own Resume",
+  "main": "index.js",
+  "config": {
+    "port": 8000
   },
+  "scripts": {
+    "preserve": "run-p compile",
+    "serve": "run-p serve:**",
+    "serve:scss": "guard start",
+    "serve:html": "http-server dist/$npm_package_version/ -p $npm_package_config_port",
+    "serve:launch": "xdg-open http://localhost:$npm_package_config_port",
+    "precompile": "rm -rf dist/$npm_package_version/ && mkdirp dist/$npm_package_version/",
+    "compile": "run-p compile:**",
+    "compile:html": "node javascripts/gen-html.js $npm_package_version",
+    "compile:css": "postcss -u postcss-cssnext -d dist/$npm_package_version/stylesheets stylesheets/*.css",
+    "watch:css": "onchange \"stylesheets/**/*.css\" -- npm run compile:css",
+    "watch:html": "onchange \"components/**/*.html\" \"./index.html\" -- npm run compile:html",
+    "watch": "run-p watch:**",
+    "dev": "run-p watch serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "resume",
+    "sass",
+    "postcss",
+    "ES6"
+  ],
+  "author": "JMwill",
+  "license": "MIT",
   "devDependencies": {
-    "babel-core": "^5.5.6",
-    "browser-sync": "^2.2.1",
-    "del": "^1.1.1",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-cache": "^0.2.8",
-    "gulp-eslint": "^0.13.2",
-    "gulp-if": "^1.2.5",
-    "gulp-imagemin": "^2.2.1",
-    "gulp-load-plugins": "^0.10.0",
-    "gulp-minify-css": "^1.1.1",
-    "gulp-minify-html": "^1.0.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-sass": "^2.0.0",
-    "gulp-size": "^1.2.1",
-    "gulp-sourcemaps": "^1.5.0",
-    "gulp-uglify": "^1.1.0",
-    "gulp-useref": "^1.1.1",
-    "main-bower-files": "^2.5.0",
-    "opn": "^1.0.1",
-    "wiredep": "^2.2.2"
+    "art-template": "^3.1.3",
+    "http-server": "^0.9.0",
+    "mkdirp": "^0.5.1",
+    "npm-run-all": "^4.0.1",
+    "onchange": "^3.2.1",
+    "postcss": "^5.2.14",
+    "postcss-cli": "^3.0.0-beta",
+    "postcss-cssnext": "^2.9.0"
   },
-  "eslintConfig": {
-    "env": {
-      "node": true,
-      "browser": true
-    },
-    "rules": {
-      "quotes": [
-        2,
-        "single"
-      ],
-      "strict": 0,
-      "new-cap": [2, { "capIsNewExceptions": ["Bar"] }]
-    },
-    "globals": {
-      "$": true,
-      "Chart": true
-    }
-  }
+  "dependencies": {}
 }

@@ -1,0 +1,93 @@
+@import "compass/utilities/general";
+@import "compass/css3";
+
+@function px2Rem($px, $base: 16) {
+	@return ($px / $base) * 1rem;
+}
+
+$bg-color: #efefef;
+// $text-color: #4f4f4f;
+$text-color: #fff;
+$highlight-text-color: white;
+body {
+	font-family: 'Open Sans', fantasy, sans-serif;
+	margin: 0;
+}
+
+.container {
+	margin: 0 auto;
+	padding: px2Rem(35) px2Rem(28);
+	width: px2Rem(745);
+	height: px2Rem(1050);
+}
+
+.personal-info {
+	font-size: px2Rem(12);
+
+	.desc-card,
+	.info-card {
+		display: inline-block;
+	}
+
+	.desc-card,
+	.info-card,
+	.card-name,
+	.card-msg {
+		vertical-align: top;
+	}
+
+	.desc-card {
+		color: #393536;
+
+		.name {
+			font-size: px2Rem(24);
+		}
+		.job-title {
+			color: #918f90;
+		}
+	}
+
+	.info-card {
+		margin-left: px2Rem(35);
+		color: #bcbcbc;
+	}
+		.card-name {
+			margin-right: px2Rem(5);
+		}
+		.card-msg {
+			display: inline-block;
+			border-left: px2Rem(1) solid #bcbcbc;
+			padding-left: px2Rem(7);
+		}
+	
+	.site-link {
+		float: right;
+		color: #4f4c4d;
+		font-style: italic;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.resume-content {
+	margin-top: px2Rem(65);
+	.resume-card {
+		header {
+			color: #231f20;
+			padding-bottom: px2Rem(6);
+			border-bottom: px2Rem(2) dotted #231f20;
+		}
+	}
+	
+	.personal-statement {
+		font-size: .7em;
+		color: #7b7979;
+		
+		p {
+			margin: px2Rem(16) 0;
+		}
+	}
+}
