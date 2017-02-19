@@ -1,0 +1,14 @@
+/* line 1, ../sass/global.scss */
+html {
+  font-size: 16px;
+}
+
+/* line 2, ../sass/global.scss */
+body {
+  margin: 0;
+}
+
+/* line 3, ../sass/global.scss */
+* {
+  box-sizing: border-box;
+}

@@ -1,1 +1,40 @@
-{}
+{
+    "baseInfo": {
+        "name": "李嘉铭",
+        "title": "前端工程师",
+        "photo": "https://avatars2.githubusercontent.com/u/11496449?v=3&s=460",
+        "telephone": "13610173635",
+        "email": "jmlsphere@gmail.com",
+        "website": "https://jmwill.github.io",
+        "graduateFrom": "广东工业大学",
+        "degree": "学士"
+    },
+    "skill": {
+        "JavaScript":   { "rate": 85, "desc": "可脱离框架使用JavaScript进行开发, 能够对代码进行合理的组织, 模块化管理" },
+        "CSS":          { "rate": 85, "desc": "理解CSS原理, 能够编写正确的CSS代码, 保持代码的可拓展性" },
+        "HTML":         { "rate": 85, "desc": "理解语义化, 能够对页面进行合理的组织, 避免无意义的元素出现" },
+        "Vue":          { "rate": 80, "desc": "理解模块化开发的含义, 使用Vue框架进行模块化开发, 保证项目的可管理性以及代码质量" },
+        "React":        { "rate": 70, "desc": "维护过React项目, 能够使用React进行开发" },
+        "jQuery":       { "rate": 85, "desc": "熟练使用jQuery进行日常开发" },
+        "Chart.js":     { "rate": 85, "desc": "熟悉Chart.js的使用" },
+        "Gulp":         { "rate": 80, "desc": "使用过一段时间的Gulp来自动运行项目开发的相关任务"},
+        "Webpack":      { "rate": 70, "desc": "可以使用Webpack对项目进行管理配置, 实现开发过程任务的自动化"},
+        "Sass":         { "rate": 75, "desc": "了解Sass使用, 能够使用其进行日常开发" },
+        "BEM":          { "rate": 70, "desc": "学习过基本的BEM理念, 可以使用其对代码进行合理的组织" },
+        "Node.js":      { "rate": 70, "desc": "熟悉Node.js使用, 能够使用相关工具进行项目管理, 后台开发等" },
+        "Python":       { "rate": 70, "desc": "了解Python, 能够使用其进行开发" },
+        "Linux":        { "rate": 75, "desc": "日常使用Linux系统进行开发" },
+        "Git":          { "rate": 70, "desc": "熟练使用Git进行代码的管理" },
+        "Spider":       { "rate": 65, "desc": "学习过爬虫相关的知识, 进行过爬虫项目的开发" }
+    },
+    "experience": [
+        {
+            "company": "",
+            "project": [{
+                "name": "",
+                "type": [],
+                "desc": ""
+            }]
+        }
+    ]
+}
