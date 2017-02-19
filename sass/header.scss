@@ -19,13 +19,13 @@
 						rgb(79, 79, 72) 60%, rgba(255, 255, 255, .2) 60%,
                         rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
 	background-repeat: no-repeat;
-	background-size: px2Rem(450) 100%;
+	background-size: p2e(450) 100%;
 }
 .profile-avatar {
 	display: inline-block;
-	width: px2Rem(140); height: px2Rem(140);
-	margin: px2Rem(50) px2Rem(25) px2Rem(30) px2Rem(100);
-	border-radius: px2Rem(100);
+	width: p2e(140); height: p2e(140);
+	margin: p2e(50) p2e(25) p2e(30) p2e(100);
+	border-radius: p2e(100);
 	vertical-align: middle;
 	overflow: hidden;
 	transition: transform .4s cubic-bezier(.95,-0.39,0,1.45);
@@ -38,10 +38,10 @@
 	width: 100%;
 }
 
-$profile-info-margin: px2Rem(8);
+$profile-info-margin: p2e(8);
 .profile-info {
 	display: inline-block;
-	margin: px2Rem(50) 0 px2Rem(30);
+	margin: p2e(50) 0 p2e(30);
 	vertical-align: middle;
 	overflow: hidden;
 }
@@ -53,12 +53,12 @@ $profile-info-margin: px2Rem(8);
 .profile-info__name {
 	font-size: 200%;
 	line-height: 1.1;
-	letter-spacing: px2Rem(5);
+	letter-spacing: p2e(5);
 }
 .profile-info__title {
 	font-size: 120%;
 	font-weight: bold;
-	letter-spacing: px2Rem(2);
+	letter-spacing: p2e(2);
 }
 
 $profile-info-skip-color: #373C38;
@@ -76,4 +76,21 @@ $profile-info-skip-color: #373C38;
 	&:hover { color: #fefcfc; text-decoration: underline; }
 	&:active { color: $profile-info-skip-color; }
 	text-decoration: none;
+}
+
+@media (max-width: 600px) {
+	.profile {
+		background-size: p2e(600) 100%;
+	}
+	.profile-avatar,
+	.profile-info {
+		display: block;
+	}
+	.profile-avatar {
+		margin: p2e(50) auto 0;
+	}
+	.profile-info {
+		margin: p2e(30) auto;
+		text-align: center;
+	}
 }

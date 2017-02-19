@@ -101,3 +101,27 @@
 .profile-info__website-link:active {
   color: #373C38;
 }
+
+@media (max-width: 600px) {
+  /* line 82, ../sass/header.scss */
+  .profile {
+    background-size: 37.5rem 100%;
+  }
+
+  /* line 85, ../sass/header.scss */
+  .profile-avatar,
+  .profile-info {
+    display: block;
+  }
+
+  /* line 89, ../sass/header.scss */
+  .profile-avatar {
+    margin: 3.125rem auto 0;
+  }
+
+  /* line 92, ../sass/header.scss */
+  .profile-info {
+    margin: 1.875rem auto;
+    text-align: center;
+  }
+}

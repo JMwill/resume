@@ -1,0 +1,101 @@
+@import '_utils';
+.i-empty {
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    &::before {
+        content: '\2205',
+    }
+}
+
+$skillset-base-font-color: #fcfdff;
+.skillset {
+    color: $skillset-base-font-color;
+    background-color: #787D7B;
+    overflow: auto;
+    transition: background-color .5s ease;
+    &:hover {
+        background-color: #47aaff;
+    }
+    &:hover .skillset__header {
+        font-size: 120%;
+    }
+}
+.skillset__header {
+    margin: p2e(32) 0;
+    padding: 0 p2e(40);
+    transition: font-size .5s ease;
+}
+.skillset__title,
+.skillset__desc {
+    margin: 0;
+}
+.skillset__title {
+    font-size: 180%;
+}
+.skillset__desc {
+    font-size: 80%;
+}
+
+$skill-item-icon-width: p2e(40);
+.skill-item {
+    margin-bottom: p2e(16);
+    padding: 0 p2e(10) 0 p2e(40);
+    transition: color .5s ease;
+    cursor: pointer;
+    &:hover {
+        color: #020300;
+    }
+    &:hover .skill-item__bar {
+        background-color: rgba(0, 0, 0, .3);
+        background-image: repeating-linear-gradient(45deg,
+                            rgba(255, 255, 255, .1),
+                            rgba(255, 255, 255, .1) p2e(15),
+                            transparent 0, transparent p2e(30));
+        animation: moveline 10s linear infinite;
+    }
+}
+@keyframes moveline {
+    to { background-position: p2e(1000); }
+}
+.skill-item__icon {
+    position: absolute;
+    font-size: $skill-item-icon-width - p2e(16);
+}
+.skill-item__intr {
+    margin-left: $skill-item-icon-width;
+    margin-bottom: p2e(16);
+}
+.skill-item__bar {
+    position: relative;
+    padding-left: p2e(5);
+    line-height: 1.5;
+    background-color: rgba(255, 255, 255, .3);
+    &::after {
+        content: attr(data-rate) "%";
+        position: absolute;
+        right: p2e(10);
+    }
+}
+.skill-item__desc {
+    font-size: 80%;
+    margin: p2e(5) 0 0;
+}
+
+@media (min-width: 600px) {
+    .skillset__show {
+         display:table;  /* 调教webkit*/
+         word-spacing:-1em;
+    }
+    .skill-item {
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        word-spacing: 0;
+    }
+}

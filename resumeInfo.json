@@ -9,24 +9,25 @@
         "graduateFrom": "广东工业大学",
         "degree": "学士"
     },
-    "skill": {
-        "JavaScript":   { "rate": 85, "desc": "可脱离框架使用JavaScript进行开发, 能够对代码进行合理的组织, 模块化管理" },
-        "CSS":          { "rate": 85, "desc": "理解CSS原理, 能够编写正确的CSS代码, 保持代码的可拓展性" },
-        "HTML":         { "rate": 85, "desc": "理解语义化, 能够对页面进行合理的组织, 避免无意义的元素出现" },
-        "Vue":          { "rate": 80, "desc": "理解模块化开发的含义, 使用Vue框架进行模块化开发, 保证项目的可管理性以及代码质量" },
-        "React":        { "rate": 70, "desc": "维护过React项目, 能够使用React进行开发" },
-        "jQuery":       { "rate": 85, "desc": "熟练使用jQuery进行日常开发" },
-        "Chart.js":     { "rate": 85, "desc": "熟悉Chart.js的使用" },
-        "Gulp":         { "rate": 80, "desc": "使用过一段时间的Gulp来自动运行项目开发的相关任务"},
-        "Webpack":      { "rate": 70, "desc": "可以使用Webpack对项目进行管理配置, 实现开发过程任务的自动化"},
-        "Sass":         { "rate": 75, "desc": "了解Sass使用, 能够使用其进行日常开发" },
-        "BEM":          { "rate": 70, "desc": "学习过基本的BEM理念, 可以使用其对代码进行合理的组织" },
-        "Node.js":      { "rate": 70, "desc": "熟悉Node.js使用, 能够使用相关工具进行项目管理, 后台开发等" },
-        "Python":       { "rate": 70, "desc": "了解Python, 能够使用其进行开发" },
-        "Linux":        { "rate": 75, "desc": "日常使用Linux系统进行开发" },
-        "Git":          { "rate": 70, "desc": "熟练使用Git进行代码的管理" },
-        "Spider":       { "rate": 65, "desc": "学习过爬虫相关的知识, 进行过爬虫项目的开发" }
-    },
+    "skills": [
+        {"name": "JavaScript", "rate": 85, "icon": "devicon-javascript-plain", "desc": "可脱离框架使用JavaScript进行开发, 能够对代码进行合理的组织, 模块化管理" },
+        {"name": "CSS", "rate": 85, "icon": "devicon-css3-plain", "desc": "理解CSS原理, 能够编写正确的CSS代码, 保持代码的可拓展性" },
+        {"name": "HTML", "rate": 85, "icon": "devicon-html5-plain", "desc": "理解语义化, 能够对页面进行合理的组织, 避免无意义的元素出现" },
+        {"name": "Vue" ,"rate": 80, "icon": "i-empty", "desc": "理解模块化开发的含义, 使用Vue框架进行模块化开发, 保证项目的可管理性以及代码质量" },
+        {"name": "React" ,"rate": 70, "icon": "devicon-react-original", "desc": "维护过React项目, 能够使用React进行开发" },
+        {"name": "jQuery" ,"rate": 85, "icon": "devicon-jquery-plain", "desc": "熟练使用jQuery进行日常开发" },
+        {"name": "Bootstrap" ,"rate": 80, "icon": "devicon-bootstrap-plain", "desc": "有一段时间使用Bootstrap进行开发, 短暂回顾后, 可以快速进行开发" },
+        {"name": "Chart.js" ,"rate": 85, "icon": "i-empty", "desc": "熟悉Chart.js的使用" },
+        {"name": "Gulp" ,"rate": 80, "icon": "devicon-gulp-plain", "desc": "使用过一段时间的Gulp来自动运行项目开发的相关任务"},
+        {"name": "Webpack" ,"rate": 70, "icon": "i-empty", "desc": "可以使用Webpack对项目进行管理配置, 实现开发过程任务的自动化"},
+        {"name": "Sass" ,"rate": 75, "icon": "devicon-sass-original", "desc": "了解Sass使用, 能够使用其进行日常开发" },
+        {"name": "BEM" ,"rate": 70, "icon": "i-empty", "desc": "学习过基本的BEM理念, 可以使用其对代码进行合理的组织" },
+        {"name": "Node.js" ,"rate": 70, "icon": "devicon-nodejs-plain", "desc": "熟悉Node.js使用, 能够使用相关工具进行项目管理, 后台开发等" },
+        {"name": "Python" ,"rate": 70, "icon": "devicon-python-plain", "desc": "了解Python, 能够使用其进行开发" },
+        {"name": "Linux" ,"rate": 75, "icon": "devicon-linux-plain", "desc": "日常使用Linux系统进行开发" },
+        {"name": "Git" ,"rate": 70, "icon": "devicon-git-plain", "desc": "熟练使用Git进行代码的管理" },
+        {"name": "Spider" ,"rate": 65, "icon": "i-empty", "desc": "学习过爬虫相关的知识, 进行过爬虫项目的开发" }
+    ],
     "experience": [
         {
             "company": "",
