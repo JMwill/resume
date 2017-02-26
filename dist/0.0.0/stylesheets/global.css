@@ -1,0 +1,42 @@
+/* Global Var */
+/* Header Var */
+/* Skillset Var */
+/* Experience Var */
+/* Introduction Var */
+/* Footer Var */
+/* line 4, ../sass/global.scss */
+html {
+  font-size: 16px;
+}
+
+/* line 5, ../sass/global.scss */
+body {
+  margin: 0;
+  color: #fefcfc;
+  background-color: #FCFAF2;
+}
+
+/* line 10, ../sass/global.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 11, ../sass/global.scss */
+.header,
+.skillset,
+.exper,
+.intro {
+  margin-bottom: 1px;
+  margin-bottom: 0.0625rem;
+}
+
+/* line 17, ../sass/global.scss */
+.header,
+.skillset,
+.exper,
+.intro,
+.footer {
+  background-color: #787D7B;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3N0eWxlc2hlZXRzL2dsb2JhbC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCO0FBQ2hCLGdCQUFnQjtBQUNoQixrQkFBa0I7QUFDbEIsb0JBQW9CO0FBQ3BCLHNCQUFzQjtBQUN0QixnQkFBZ0I7QUFDaEIsaUNBQWlDO0FBQ2pDO0VBQ0UsZ0JBQWdCO0NBQ2pCOztBQUVELGlDQUFpQztBQUNqQztFQUNFLFVBQVU7RUFDVixlQUFlO0VBQ2YsMEJBQTBCO0NBQzNCOztBQUVELGtDQUFrQztBQUNsQztFQUNFLHVCQUF1QjtDQUN4Qjs7QUFFRCxrQ0FBa0M7QUFDbEM7Ozs7RUFJRSxtQkFBeUI7RUFBekIseUJBQXlCO0NBQzFCOztBQUVELGtDQUFrQztBQUNsQzs7Ozs7RUFLRSwwQkFBMEI7Q0FDM0IiLCJmaWxlIjoiZ2xvYmFsLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIEdsb2JhbCBWYXIgKi9cbi8qIEhlYWRlciBWYXIgKi9cbi8qIFNraWxsc2V0IFZhciAqL1xuLyogRXhwZXJpZW5jZSBWYXIgKi9cbi8qIEludHJvZHVjdGlvbiBWYXIgKi9cbi8qIEZvb3RlciBWYXIgKi9cbi8qIGxpbmUgNCwgLi4vc2Fzcy9nbG9iYWwuc2NzcyAqL1xuaHRtbCB7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cblxuLyogbGluZSA1LCAuLi9zYXNzL2dsb2JhbC5zY3NzICovXG5ib2R5IHtcbiAgbWFyZ2luOiAwO1xuICBjb2xvcjogI2ZlZmNmYztcbiAgYmFja2dyb3VuZC1jb2xvcjogI0ZDRkFGMjtcbn1cblxuLyogbGluZSAxMCwgLi4vc2Fzcy9nbG9iYWwuc2NzcyAqL1xuKiB7XG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG59XG5cbi8qIGxpbmUgMTEsIC4uL3Nhc3MvZ2xvYmFsLnNjc3MgKi9cbi5oZWFkZXIsXG4uc2tpbGxzZXQsXG4uZXhwZXIsXG4uaW50cm8ge1xuICBtYXJnaW4tYm90dG9tOiAwLjA2MjVyZW07XG59XG5cbi8qIGxpbmUgMTcsIC4uL3Nhc3MvZ2xvYmFsLnNjc3MgKi9cbi5oZWFkZXIsXG4uc2tpbGxzZXQsXG4uZXhwZXIsXG4uaW50cm8sXG4uZm9vdGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzc4N0Q3Qjtcbn1cbiJdfQ== */

@@ -1,0 +1,38 @@
+/* Global Var */
+/* Header Var */
+/* Skillset Var */
+/* Experience Var */
+/* Introduction Var */
+/* Footer Var */
+/* line 4, ../../sass/parts/intros.scss */
+.intro {
+  overflow: hidden;
+  padding: 0 2.5rem;
+  color: #fefcfc;
+  transition: background-color .5s;
+}
+/* line 9, ../../sass/parts/intros.scss */
+.intro:hover, .intro:active {
+  background-color: #51A8DD;
+}
+
+/* line 14, ../../sass/parts/intros.scss */
+.intro__title {
+  font-size: 180%;
+}
+
+/* line 18, ../../sass/parts/intros.scss */
+.intro__detail {
+  position: relative;
+  padding-left: 4.5rem;
+  line-height: 1.5;
+}
+/* line 22, ../../sass/parts/intros.scss */
+.intro__detail::before {
+  position: absolute;
+  left: 1rem;
+  font-family: 'FontAwesome';
+  line-height: 1.1;
+  content: "\f10d";
+  font-size: 1.5rem;
+}

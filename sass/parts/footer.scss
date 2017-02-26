@@ -1,0 +1,12 @@
+@import '../tools/utils';
+@import '../var';
+.footer {
+    color: #303030;
+    padding: p2e(48);
+    text-align: center;
+
+    &:hover,
+    &:active {
+        background-color: $footer-focus-bg;
+    }
+}

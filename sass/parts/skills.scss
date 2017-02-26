@@ -1,0 +1,103 @@
+@import '../tools/utils';
+@import '../var';
+.i-empty {
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    &::before {
+        content: '\2205',
+    }
+}
+
+.skillset {
+    overflow: auto;
+    transition: background-color .5s ease;
+    &:hover,
+    &:active {
+        background-color: $skillset-focus-bg;
+    }
+    &:hover .skillset__header,
+    &:active .skillset__header {
+        font-size: 120%;
+    }
+}
+.skillset__header {
+    margin: $block-head-margin;
+    padding: $block-padding;
+    transition: font-size .5s ease;
+}
+.skillset__title,
+.skillset__desc {
+    margin: 0;
+}
+.skillset__title {
+    font-size: 180%;
+}
+.skillset__desc {
+    font-size: 80%;
+}
+
+.skill-item {
+    margin-bottom: p2e(16);
+    padding: 0 p2e(10) 0 p2e(40);
+    transition: color .5s ease;
+    cursor: pointer;
+    &:hover,
+    &:active {
+        color: $base-focus-color;
+    }
+    &:hover .skill-item__bar,
+    &:active .skill-item__bar {
+        background-color: rgba(0, 0, 0, .3);
+        background-position: 100% 0%;
+        background-size: 200%;
+        background-image: repeating-linear-gradient(45deg,
+                            rgba(255, 255, 255, .1),
+                            rgba(255, 255, 255, .1) p2e(15),
+                            transparent 0, transparent p2e(30));
+        animation: moveline 3s linear infinite;
+    }
+}
+@keyframes moveline {
+    to { background-position: 0% 0%; }
+}
+.skill-item__icon {
+    position: absolute;
+    font-size: $skillset-item-icon-w;
+}
+.skill-item__intr {
+    margin-left: $skillset-item-icon-w + p2e(16);
+    margin-bottom: p2e(16);
+}
+.skill-item__bar {
+    position: relative;
+    padding-left: p2e(5);
+    line-height: 1.5;
+    background-color: $skillset-item-bar-color;
+    &::after {
+        content: attr(data-rate) "%";
+        position: absolute;
+        right: p2e(10);
+    }
+}
+.skill-item__desc {
+    font-size: 80%;
+    margin: p2e(5) 0 0;
+}
+
+@media (min-width: $small-show-limit) {
+    .skillset__show {
+        @include remove-block-word-space;
+    }
+    .skill-item {
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        word-spacing: 0;
+    }
+}
