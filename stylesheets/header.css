@@ -1,18 +1,21 @@
-/* line 2, ../sass/header.scss */
+/* Global Var */
+/* Header Var */
+/* Skillset Var */
+/* Experience Var */
+/* line 3, ../sass/header.scss */
 .header {
-  background: #787D7B;
   transition: background 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 /* line 5, ../sass/header.scss */
-.header:hover {
+.header:hover, .header:active {
   background: #4bbcff;
 }
-/* line 8, ../sass/header.scss */
-.header:hover .profile {
+/* line 9, ../sass/header.scss */
+.header:hover .profile, .header:active .profile {
   background-image: linear-gradient(-45deg, transparent 35%, rgba(255, 255, 255, 0.2) 35%, rgba(255, 255, 255, 0.2) 50%, #006284 50%, #006284 60%, rgba(255, 255, 255, 0.2) 60%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
 
-/* line 15, ../sass/header.scss */
+/* line 17, ../sass/header.scss */
 .profile {
   overflow: hidden;
   background-image: linear-gradient(-45deg, transparent 35%, rgba(255, 255, 255, 0.2) 35%, rgba(255, 255, 255, 0.2) 50%, #4f4f48 50%, #4f4f48 60%, rgba(255, 255, 255, 0.2) 60%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
@@ -20,28 +23,28 @@
   background-size: 28.125rem 100%;
 }
 
-/* line 24, ../sass/header.scss */
+/* line 26, ../sass/header.scss */
 .profile-avatar {
   display: inline-block;
   width: 8.75rem;
   height: 8.75rem;
   margin: 3.125rem 1.5625rem 1.875rem 6.25rem;
-  border-radius: 6.25rem;
+  border-radius: 4.375rem;
   vertical-align: middle;
   overflow: hidden;
   transition: transform 0.4s cubic-bezier(0.95, -0.39, 0, 1.45);
 }
-/* line 33, ../sass/header.scss */
-.profile-avatar:hover {
+/* line 35, ../sass/header.scss */
+.profile-avatar:hover, .profile-avatar:active {
   transform: scale(1.3);
 }
 
-/* line 37, ../sass/header.scss */
+/* line 40, ../sass/header.scss */
 .profile-avatar__photo {
   width: 100%;
 }
 
-/* line 42, ../sass/header.scss */
+/* line 44, ../sass/header.scss */
 .profile-info {
   display: inline-block;
   margin: 3.125rem 0 1.875rem;
@@ -49,77 +52,77 @@
   overflow: hidden;
 }
 
-/* line 48, ../sass/header.scss */
+/* line 50, ../sass/header.scss */
 .profile-info__name,
 .profile-info__title {
   margin: 0.5rem 0;
-  color: #fefcfc;
 }
 
-/* line 53, ../sass/header.scss */
+/* line 54, ../sass/header.scss */
 .profile-info__name {
   font-size: 200%;
   line-height: 1.1;
   letter-spacing: 0.3125rem;
 }
 
-/* line 58, ../sass/header.scss */
+/* line 59, ../sass/header.scss */
 .profile-info__title {
   font-size: 120%;
   font-weight: bold;
   letter-spacing: 0.125rem;
 }
 
-/* line 65, ../sass/header.scss */
+/* line 66, ../sass/header.scss */
 .profile-info__graduate-info,
 .profile-info__contact-way,
 .profile-info__website,
+.profile-info__work-for,
 .profile-info__website-link {
   margin: 0.25rem 0;
   font-size: 90%;
   color: #373C38;
 }
 
-/* line 73, ../sass/header.scss */
+/* line 75, ../sass/header.scss */
 .profile-info__website-link {
   text-decoration: none;
 }
-/* line 74, ../sass/header.scss */
+/* line 76, ../sass/header.scss */
 .profile-info__website-link:link {
   color: #373C38;
 }
-/* line 75, ../sass/header.scss */
+/* line 77, ../sass/header.scss */
 .profile-info__website-link:visited {
   color: #373C38;
 }
-/* line 76, ../sass/header.scss */
+/* line 78, ../sass/header.scss */
 .profile-info__website-link:hover {
   color: #fefcfc;
   text-decoration: underline;
 }
-/* line 77, ../sass/header.scss */
+/* line 79, ../sass/header.scss */
 .profile-info__website-link:active {
   color: #373C38;
 }
 
 @media (max-width: 600px) {
-  /* line 82, ../sass/header.scss */
+  /* line 84, ../sass/header.scss */
   .profile {
     background-size: 37.5rem 100%;
   }
 
-  /* line 85, ../sass/header.scss */
+  /* line 87, ../sass/header.scss */
   .profile-avatar,
   .profile-info {
     display: block;
   }
 
-  /* line 89, ../sass/header.scss */
+  /* line 91, ../sass/header.scss */
   .profile-avatar {
     margin: 3.125rem auto 0;
   }
 
-  /* line 92, ../sass/header.scss */
+  /* line 94, ../sass/header.scss */
   .profile-info {
     margin: 1.875rem auto;
     text-align: center;

@@ -1,0 +1,25 @@
+@import './_utils';
+@import './var';
+.intro {
+    overflow: hidden;
+    padding: $block-padding;
+    background-color: $base-bg-color;
+    color: $base-font-color;
+}
+.intro__title {
+    font-size: 180%;
+}
+
+.intro__detail {
+    position: relative;
+    padding-left: p2e(72);
+    line-height: 1.5;
+    &::before {
+        position: absolute;
+        left: p2e(16);
+        font-family: 'FontAwesome';
+        line-height: 1.1;
+        content: "\f10d";
+        font-size: p2e(24);
+    }
+}

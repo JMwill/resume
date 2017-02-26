@@ -17,6 +17,11 @@
                 学位: <span class="profile-info__graduate-degree">{{baseInfo.degree}}</span>
             </p>
             <p class="profile-info__website">网址: <a title="个人网址" class="profile-info__website-link" href="{{baseInfo.website}}">{{baseInfo.website}}</a></p>
+            <p class="profile-info__work-for">目前就职于: 
+                {{each workFor as val index}}
+                <span>{{val}}</span>
+                {{/each}}
+            </p>
         </div>
     </div>
 </header>

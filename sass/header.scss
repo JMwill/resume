@@ -1,36 +1,39 @@
-@import './_utils.scss';
+@import './_utils';
+@import './var';
 .header {
-	background: #787D7B;
 	transition: background .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-	&:hover {
-		background: #4bbcff;
+	&:hover,
+	&:active {
+		background: $header-focus-bg;
 	}
-	&:hover .profile {
-		background-image: linear-gradient(-45deg, transparent 35%, rgba(255, 255, 255, .2) 35%,
-							rgba(255, 255, 255, .2) 50%, rgb(0, 98, 132) 50%,
-							rgb(0, 98, 132) 60%, rgba(255, 255, 255, .2) 60%,
-							rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+	&:hover .profile,
+	&:active .profile {
+		background-image: linear-gradient(-45deg, transparent 35%, $header-ribbon-outer-color 35%,
+							$header-ribbon-outer-color 50%, $header-ribbon-active-inner-color 50%,
+							$header-ribbon-active-inner-color 60%, $header-ribbon-outer-color 60%,
+							$header-ribbon-outer-color 75%, transparent 75%, transparent);
 	}
 }
 .profile {
 	overflow: hidden;
-	background-image: linear-gradient(-45deg, transparent 35%, rgba(255, 255, 255, .2) 35%,
-                        rgba(255, 255, 255, .2) 50%, rgb(79, 79, 72) 50%,
-						rgb(79, 79, 72) 60%, rgba(255, 255, 255, .2) 60%,
-                        rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(-45deg, transparent 35%, $header-ribbon-outer-color 35%,
+                        $header-ribbon-outer-color 50%, $header-ribbon-inner-color 50%,
+						$header-ribbon-inner-color 60%, $header-ribbon-outer-color 60%,
+                        $header-ribbon-outer-color 75%, transparent 75%, transparent);
 	background-repeat: no-repeat;
-	background-size: p2e(450) 100%;
+	background-size: $header-ribbon-w 100%;
 }
 .profile-avatar {
 	display: inline-block;
-	width: p2e(140); height: p2e(140);
+	width: $header-avatar-w; height: $header-avatar-w;
 	margin: p2e(50) p2e(25) p2e(30) p2e(100);
-	border-radius: p2e(100);
+	border-radius: $header-avatar-w / 2;
 	vertical-align: middle;
 	overflow: hidden;
 	transition: transform .4s cubic-bezier(.95,-0.39,0,1.45);
 
-	&:hover {
+	&:hover,
+	&:active {
 		transform: scale(1.3);
 	}
 }
@@ -38,7 +41,6 @@
 	width: 100%;
 }
 
-$profile-info-margin: p2e(8);
 .profile-info {
 	display: inline-block;
 	margin: p2e(50) 0 p2e(30);
@@ -47,8 +49,7 @@ $profile-info-margin: p2e(8);
 }
 .profile-info__name,
 .profile-info__title {
-	margin: $profile-info-margin 0;
-	color: #fefcfc;
+	margin: $header-profile-info-margin 0;
 }
 .profile-info__name {
 	font-size: 200%;
@@ -65,22 +66,23 @@ $profile-info-skip-color: #373C38;
 .profile-info__graduate-info,
 .profile-info__contact-way,
 .profile-info__website,
+.profile-info__work-for,
 .profile-info__website-link {
-	margin: $profile-info-margin / 2 0;
+	margin: $header-profile-info-margin / 2 0;
 	font-size: 90%;
 	color: $profile-info-skip-color;
 }
 .profile-info__website-link {
 	&:link { color: $profile-info-skip-color; }
 	&:visited { color: $profile-info-skip-color; }
-	&:hover { color: #fefcfc; text-decoration: underline; }
+	&:hover { color: $base-font-color; text-decoration: underline; }
 	&:active { color: $profile-info-skip-color; }
 	text-decoration: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: $small-show-limit) {
 	.profile {
-		background-size: p2e(600) 100%;
+		background-size: $header-ribbon-small-show-w 100%;
 	}
 	.profile-avatar,
 	.profile-info {

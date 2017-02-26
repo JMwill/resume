@@ -1,5 +1,9 @@
 @charset "UTF-8";
-/* line 2, ../sass/skill.scss */
+/* Global Var */
+/* Header Var */
+/* Skillset Var */
+/* Experience Var */
+/* line 3, ../sass/skills.scss */
 .i-empty {
   speak: none;
   font-style: normal;
@@ -10,114 +14,114 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 11, ../sass/skill.scss */
+/* line 12, ../sass/skills.scss */
 .i-empty::before {
   content: "∅";
 }
 
-/* line 17, ../sass/skill.scss */
+/* line 17, ../sass/skills.scss */
 .skillset {
-  color: #fcfdff;
-  background-color: #787D7B;
   overflow: auto;
   transition: background-color .5s ease;
 }
-/* line 22, ../sass/skill.scss */
+/* line 20, ../sass/skills.scss */
 .skillset:hover, .skillset:active {
   background-color: #47aaff;
 }
-/* line 26, ../sass/skill.scss */
+/* line 24, ../sass/skills.scss */
 .skillset:hover .skillset__header, .skillset:active .skillset__header {
   font-size: 120%;
 }
 
-/* line 31, ../sass/skill.scss */
+/* line 29, ../sass/skills.scss */
 .skillset__header {
   margin: 2rem 0;
   padding: 0 2.5rem;
   transition: font-size .5s ease;
 }
 
-/* line 36, ../sass/skill.scss */
+/* line 34, ../sass/skills.scss */
 .skillset__title,
 .skillset__desc {
   margin: 0;
 }
 
-/* line 40, ../sass/skill.scss */
+/* line 38, ../sass/skills.scss */
 .skillset__title {
   font-size: 180%;
 }
 
-/* line 43, ../sass/skill.scss */
+/* line 41, ../sass/skills.scss */
 .skillset__desc {
   font-size: 80%;
 }
 
-/* line 48, ../sass/skill.scss */
+/* line 45, ../sass/skills.scss */
 .skill-item {
   margin-bottom: 1rem;
   padding: 0 0.625rem 0 2.5rem;
   transition: color .5s ease;
   cursor: pointer;
 }
-/* line 53, ../sass/skill.scss */
+/* line 50, ../sass/skills.scss */
 .skill-item:hover, .skill-item:active {
   color: #020300;
 }
-/* line 57, ../sass/skill.scss */
+/* line 54, ../sass/skills.scss */
 .skill-item:hover .skill-item__bar, .skill-item:active .skill-item__bar {
   background-color: rgba(0, 0, 0, 0.3);
+  background-position: 100% 0%;
+  background-size: 200%;
   background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 0.9375rem, transparent 0, transparent 1.875rem);
-  animation: moveline 10s linear infinite;
+  animation: moveline 3s linear infinite;
 }
 
 @keyframes moveline {
   to {
-    background-position: 62.5rem;
+    background-position: 0% 0%;
   }
 }
-/* line 70, ../sass/skill.scss */
+/* line 69, ../sass/skills.scss */
 .skill-item__icon {
   position: absolute;
   font-size: 1.5rem;
 }
 
-/* line 74, ../sass/skill.scss */
+/* line 73, ../sass/skills.scss */
 .skill-item__intr {
   margin-left: 2.5rem;
   margin-bottom: 1rem;
 }
 
-/* line 78, ../sass/skill.scss */
+/* line 77, ../sass/skills.scss */
 .skill-item__bar {
   position: relative;
   padding-left: 0.3125rem;
   line-height: 1.5;
   background-color: rgba(255, 255, 255, 0.3);
 }
-/* line 83, ../sass/skill.scss */
+/* line 82, ../sass/skills.scss */
 .skill-item__bar::after {
   content: attr(data-rate) "%";
   position: absolute;
   right: 0.625rem;
 }
 
-/* line 89, ../sass/skill.scss */
+/* line 88, ../sass/skills.scss */
 .skill-item__desc {
   font-size: 80%;
   margin: 0.3125rem 0 0;
 }
 
 @media (min-width: 600px) {
-  /* line 95, ../sass/skill.scss */
+  /* line 94, ../sass/skills.scss */
   .skillset__show {
     display: table;
     /* 调教webkit*/
     word-spacing: -1em;
   }
 
-  /* line 99, ../sass/skill.scss */
+  /* line 97, ../sass/skills.scss */
   .skill-item {
     display: inline-block;
     width: 50%;

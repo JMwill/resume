@@ -1,3 +1,15 @@
+@import './var';
+
 html { font-size: 16px; }
-body { margin: 0; }
+body {
+    margin: 0;
+    color: #fcfdff;
+    background-color: $base-body-bg-color;
+}
 * { box-sizing: border-box; }
+// .header,
+// .skillset,
+// .exper {
+//     color: #fcfdff;
+//     background-color: ;
+// }

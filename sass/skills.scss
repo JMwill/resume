@@ -1,4 +1,5 @@
-@import '_utils';
+@import './_utils';
+@import './var';
 .i-empty {
     speak: none;
     font-style: normal;
@@ -13,22 +14,21 @@
     }
 }
 
-$skillset-base-font-color: #fcfdff;
 .skillset {
-    color: $skillset-base-font-color;
-    background-color: #787D7B;
     overflow: auto;
     transition: background-color .5s ease;
-    &:hover {
-        background-color: #47aaff;
+    &:hover,
+    &:active {
+        background-color: $skillset-focus-bg;
     }
-    &:hover .skillset__header {
+    &:hover .skillset__header,
+    &:active .skillset__header {
         font-size: 120%;
     }
 }
 .skillset__header {
-    margin: p2e(32) 0;
-    padding: 0 p2e(40);
+    margin: $block-head-margin;
+    padding: $block-padding;
     transition: font-size .5s ease;
 }
 .skillset__title,
@@ -42,40 +42,43 @@ $skillset-base-font-color: #fcfdff;
     font-size: 80%;
 }
 
-$skill-item-icon-width: p2e(40);
 .skill-item {
     margin-bottom: p2e(16);
     padding: 0 p2e(10) 0 p2e(40);
     transition: color .5s ease;
     cursor: pointer;
-    &:hover {
-        color: #020300;
+    &:hover,
+    &:active {
+        color: $base-focus-color;
     }
-    &:hover .skill-item__bar {
+    &:hover .skill-item__bar,
+    &:active .skill-item__bar {
         background-color: rgba(0, 0, 0, .3);
+        background-position: 100% 0%;
+        background-size: 200%;
         background-image: repeating-linear-gradient(45deg,
                             rgba(255, 255, 255, .1),
                             rgba(255, 255, 255, .1) p2e(15),
                             transparent 0, transparent p2e(30));
-        animation: moveline 10s linear infinite;
+        animation: moveline 3s linear infinite;
     }
 }
 @keyframes moveline {
-    to { background-position: p2e(1000); }
+    to { background-position: 0% 0%; }
 }
 .skill-item__icon {
     position: absolute;
-    font-size: $skill-item-icon-width - p2e(16);
+    font-size: $skillset-item-icon-w;
 }
 .skill-item__intr {
-    margin-left: $skill-item-icon-width;
+    margin-left: $skillset-item-icon-w + p2e(16);
     margin-bottom: p2e(16);
 }
 .skill-item__bar {
     position: relative;
     padding-left: p2e(5);
     line-height: 1.5;
-    background-color: rgba(255, 255, 255, .3);
+    background-color: $skillset-item-bar-color;
     &::after {
         content: attr(data-rate) "%";
         position: absolute;
@@ -87,10 +90,9 @@ $skill-item-icon-width: p2e(40);
     margin: p2e(5) 0 0;
 }
 
-@media (min-width: 600px) {
+@media (min-width: $small-show-limit) {
     .skillset__show {
-         display:table;  /* 调教webkit*/
-         word-spacing:-1em;
+        @include remove-block-word-space;
     }
     .skill-item {
         display: inline-block;

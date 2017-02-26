@@ -1,0 +1,11 @@
+<div class="exper">
+    <header class="exper__header">
+        <p class="exper__title">经验 (Experience)</p>
+        <hr>
+    </header>
+    <main class="exper__show">
+        {{each experiences as val index}}
+            {{include 'exper__item' val index}}
+        {{/each}}
+    </main>
+</div>
