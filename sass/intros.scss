@@ -1,10 +1,15 @@
 @import './_utils';
 @import './var';
+
 .intro {
     overflow: hidden;
     padding: $block-padding;
-    background-color: $base-bg-color;
     color: $base-font-color;
+    transition: background-color .5s;
+    &:hover,
+    &:active {
+        background-color: $intro-focus-bg;
+    }
 }
 .intro__title {
     font-size: 180%;

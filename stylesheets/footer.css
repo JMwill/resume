@@ -1,7 +1,16 @@
-/* line 2, ../sass/footer.scss */
+/* Global Var */
+/* Header Var */
+/* Skillset Var */
+/* Experience Var */
+/* Introduction Var */
+/* Footer Var */
+/* line 3, ../sass/footer.scss */
 .footer {
-  background: #0f0f0f;
   color: #303030;
   padding: 3rem;
   text-align: center;
+}
+/* line 8, ../sass/footer.scss */
+.footer:hover, .footer:active {
+  background-color: #4bbcff;
 }

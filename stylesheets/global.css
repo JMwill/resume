@@ -2,19 +2,38 @@
 /* Header Var */
 /* Skillset Var */
 /* Experience Var */
-/* line 3, ../sass/global.scss */
+/* Introduction Var */
+/* Footer Var */
+/* line 4, ../sass/global.scss */
 html {
   font-size: 16px;
 }
 
-/* line 4, ../sass/global.scss */
+/* line 5, ../sass/global.scss */
 body {
   margin: 0;
-  color: #fcfdff;
-  background-color: #787D7B;
+  color: #fefcfc;
+  background-color: #FCFAF2;
 }
 
-/* line 9, ../sass/global.scss */
+/* line 10, ../sass/global.scss */
 * {
   box-sizing: border-box;
+}
+
+/* line 11, ../sass/global.scss */
+.header,
+.skillset,
+.exper,
+.intro {
+  margin-bottom: 0.0625rem;
+}
+
+/* line 17, ../sass/global.scss */
+.header,
+.skillset,
+.exper,
+.intro,
+.footer {
+  background-color: #787D7B;
 }

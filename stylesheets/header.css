@@ -2,6 +2,8 @@
 /* Header Var */
 /* Skillset Var */
 /* Experience Var */
+/* Introduction Var */
+/* Footer Var */
 /* line 3, ../sass/header.scss */
 .header {
   transition: background 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -72,7 +74,7 @@
   letter-spacing: 0.125rem;
 }
 
-/* line 66, ../sass/header.scss */
+/* line 65, ../sass/header.scss */
 .profile-info__graduate-info,
 .profile-info__contact-way,
 .profile-info__website,
@@ -83,46 +85,46 @@
   color: #373C38;
 }
 
-/* line 75, ../sass/header.scss */
+/* line 74, ../sass/header.scss */
 .profile-info__website-link {
   text-decoration: none;
 }
-/* line 76, ../sass/header.scss */
+/* line 75, ../sass/header.scss */
 .profile-info__website-link:link {
   color: #373C38;
 }
-/* line 77, ../sass/header.scss */
+/* line 76, ../sass/header.scss */
 .profile-info__website-link:visited {
   color: #373C38;
 }
-/* line 78, ../sass/header.scss */
+/* line 77, ../sass/header.scss */
 .profile-info__website-link:hover {
   color: #fefcfc;
   text-decoration: underline;
 }
-/* line 79, ../sass/header.scss */
+/* line 78, ../sass/header.scss */
 .profile-info__website-link:active {
   color: #373C38;
 }
 
 @media (max-width: 600px) {
-  /* line 84, ../sass/header.scss */
+  /* line 83, ../sass/header.scss */
   .profile {
     background-size: 37.5rem 100%;
   }
 
-  /* line 87, ../sass/header.scss */
+  /* line 86, ../sass/header.scss */
   .profile-avatar,
   .profile-info {
     display: block;
   }
 
-  /* line 91, ../sass/header.scss */
+  /* line 90, ../sass/header.scss */
   .profile-avatar {
     margin: 3.125rem auto 0;
   }
 
-  /* line 94, ../sass/header.scss */
+  /* line 93, ../sass/header.scss */
   .profile-info {
     margin: 1.875rem auto;
     text-align: center;

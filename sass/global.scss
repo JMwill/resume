@@ -1,15 +1,23 @@
+@import './_utils';
 @import './var';
 
-html { font-size: 16px; }
+html { font-size: $root-font-size; }
 body {
     margin: 0;
-    color: #fcfdff;
+    color: $base-font-color;
     background-color: $base-body-bg-color;
 }
 * { box-sizing: border-box; }
-// .header,
-// .skillset,
-// .exper {
-//     color: #fcfdff;
-//     background-color: ;
-// }
+.header,
+.skillset,
+.exper,
+.intro {
+    margin-bottom: p2e(1);
+}
+.header,
+.skillset,
+.exper,
+.intro,
+.footer {
+    background-color: $base-bg-color;
+}

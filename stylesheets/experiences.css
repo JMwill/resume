@@ -3,6 +3,8 @@
 /* Header Var */
 /* Skillset Var */
 /* Experience Var */
+/* Introduction Var */
+/* Footer Var */
 /* line 4, ../sass/experiences.scss */
 .exper {
   overflow: hidden;
@@ -11,7 +13,7 @@
 }
 /* line 8, ../sass/experiences.scss */
 .exper:hover, .exper:active {
-  background-color: #81C7D4;
+  background-color: #7DB9DE;
   color: #336774;
 }
 

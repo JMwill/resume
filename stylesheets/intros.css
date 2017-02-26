@@ -2,26 +2,32 @@
 /* Header Var */
 /* Skillset Var */
 /* Experience Var */
-/* line 3, ../sass/intros.scss */
+/* Introduction Var */
+/* Footer Var */
+/* line 4, ../sass/intros.scss */
 .intro {
   overflow: hidden;
   padding: 0 2.5rem;
-  background-color: #0D0D0D;
   color: #fefcfc;
+  transition: background-color .5s;
+}
+/* line 9, ../sass/intros.scss */
+.intro:hover, .intro:active {
+  background-color: #51A8DD;
 }
 
-/* line 9, ../sass/intros.scss */
+/* line 14, ../sass/intros.scss */
 .intro__title {
   font-size: 180%;
 }
 
-/* line 13, ../sass/intros.scss */
+/* line 18, ../sass/intros.scss */
 .intro__detail {
   position: relative;
   padding-left: 4.5rem;
   line-height: 1.5;
 }
-/* line 17, ../sass/intros.scss */
+/* line 22, ../sass/intros.scss */
 .intro__detail::before {
   position: absolute;
   left: 1rem;

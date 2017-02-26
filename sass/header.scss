@@ -62,7 +62,6 @@
 	letter-spacing: p2e(2);
 }
 
-$profile-info-skip-color: #373C38;
 .profile-info__graduate-info,
 .profile-info__contact-way,
 .profile-info__website,
@@ -70,13 +69,13 @@ $profile-info-skip-color: #373C38;
 .profile-info__website-link {
 	margin: $header-profile-info-margin / 2 0;
 	font-size: 90%;
-	color: $profile-info-skip-color;
+	color: $header-profile-info-color;
 }
 .profile-info__website-link {
-	&:link { color: $profile-info-skip-color; }
-	&:visited { color: $profile-info-skip-color; }
+	&:link { color: $header-profile-info-color; }
+	&:visited { color: $header-profile-info-color; }
 	&:hover { color: $base-font-color; text-decoration: underline; }
-	&:active { color: $profile-info-skip-color; }
+	&:active { color: $header-profile-info-color; }
 	text-decoration: none;
 }
 
