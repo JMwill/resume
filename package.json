@@ -17,7 +17,7 @@
     "precompile": "rm -rf dist/$npm_package_version/ && mkdirp dist/$npm_package_version/",
     "compile": "run-p compile:**",
     "compile:html": "node javascripts/gen-html.js $npm_package_version",
-    "compile:css": "postcss -u postcss-cssnext -d dist/$npm_package_version/stylesheets stylesheets/*.css",
+    "compile:css": "compass compile && postcss -u postcss-cssnext -d dist/$npm_package_version/stylesheets stylesheets/*.css",
     "postcompile": "npm run cptodist",
     "predevcompile": "rm -rf dev/$npm_package_version/ && mkdirp dev/$npm_package_version/",
     "devcompile": "run-p devcompile:**",
