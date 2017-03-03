@@ -1,0 +1,38 @@
+language: node_js
+node_js: stable
+
+sudo: false
+
+# Travis-CI Caching
+cache:
+  directories:
+    - node_modules
+
+
+# S: Build Lifecycle
+install:
+  - npm i
+
+#before_script:
+#  - npm install -g gulp
+
+script:
+  - npm run build
+
+after_script:
+  - cd dist
+  - git init
+  - git config user.name "JMwill"
+  - git config user.email "787505998@qq.com"
+  - git add .
+  - git commit -m "Update Resume"
+  - git push --force --quiet "https://${GH_Token}@${GH_REF}" master:gh-pages
+# E: Build LifeCycle
+
+branches:
+  only:
+    - master
+env:
+ global:
+   - GH_REF: github.com/JMwill/resume.git
+   - secure: "o/XL8QPN6K7Z/L0WqxIgwo/wBeSYZKDb6EGB493feDFG8YeIX2o9x1rMXjSNHhx2x55hsKfy7pJkVNJcR86WTjrtQHrXG2TXQBnfy3BklWdd0ckemQG6TDPJEk79BMRqM+yQuYyMIsjm8yvDj8CNQeWtAZLzYuuQ471jlC3yQlPbxe0Hn0WUjN1gsFc7hCKmOglwJg1Hz8F1guOKJ3cLQvJ1jZOrW+FCfXrcA1TPPXK2gqHvFjjAh8XTQna6+X1MggYD6jLD6nP0xmKxCo1CtgqROsVHY84WonSOpl27Aw4eEDrcN5AQR/+UadeIUdFQFLy0TJa89zQuwoIDDbXhXIBh0rSzBtSWs0IOb5lEAzvBAIW6NNgJdJbxvtaOpWzBm62tiP6pUnLqc2MbxAKb23OltiUVi9TT9NYPIGdp2wnggj6xJmlbuJoOV8Q8SPxsv9ClBbm8DtF1C27oi00JS8o+iYDoHbcAyxbU9v4LNmGTbWKkunPNcrUtWY8Z8YhSJX0s1P6Yd65eWeK1JaZyVviZAP7TG+aNsYGuY8RkeTYPk8QKU3HWPfg2VpKVGi8buMV4Yopn9881Is2ATI7viT7r1ojHzbSPlBS7ggfD30HxFgJETBXwDNQeTQ2yCzTJIW7ul4fQ3wFVIKHzqe1XB2gysFGpXNcbD5nIxs6Jm80="
