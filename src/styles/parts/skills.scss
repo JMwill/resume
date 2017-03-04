@@ -25,6 +25,7 @@
     &:hover .skillset__title,
     &:active .skillset__title,
     &:focus .skillset__title {
+        display: inline-block;
         transform: scale(1.2);
     }
 }
