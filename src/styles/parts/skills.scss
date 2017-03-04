@@ -18,18 +18,23 @@
     overflow: auto;
     transition: background-color .5s ease;
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
         background-color: $skillset-focus-bg;
     }
-    &:hover .skillset__header,
-    &:active .skillset__header {
-        font-size: 120%;
+    &:hover .skillset__title,
+    &:active .skillset__title,
+    &:focus .skillset__title {
+        transform: scale(1.2);
     }
 }
 .skillset__header {
     margin: $block-head-margin;
     padding: $block-padding;
-    transition: font-size .5s ease;
+}
+.skillset__title {
+    transition: transform .5s ease;
+    transform-origin: left bottom;
 }
 .skillset__title,
 .skillset__desc {
@@ -48,11 +53,13 @@
     transition: color .5s ease;
     cursor: pointer;
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
         color: $base-focus-color;
     }
     &:hover .skill-item__bar,
-    &:active .skill-item__bar {
+    &:active .skill-item__bar,
+    &:focus .skill-item__bar {
         background-color: rgba(0, 0, 0, .3);
         background-position: 100% 0%;
         background-size: 200%;

@@ -7,7 +7,8 @@
     color: $base-font-color;
     transition: background-color .5s;
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
         background-color: $intro-focus-bg;
     }
 }
@@ -16,13 +17,12 @@
 }
 
 .intro__detail {
-    position: relative;
-    padding-left: p2e(72);
+    padding-left: p2e(16);
+    border-left: solid 5px;
     line-height: 1.5;
     &::before {
-        position: absolute;
-        left: p2e(16);
-        font-family: 'FontAwesome';
+        padding: p2e(10);
+        font-family: "FontAwesome";
         line-height: 1.1;
         content: "\f10d";
         font-size: p2e(24);

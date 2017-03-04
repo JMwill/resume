@@ -33,6 +33,10 @@ let paths = {
     clean: {
         dev: `dev/${version}/`,
         build: 'dist/'
+    },
+    favicon: {
+        src: 'src/favicon.ico',
+        build: 'dist/'
     }
 };
 
@@ -49,7 +53,7 @@ gulp.task('devClean', () => {
 
 gulp.task('devStyles', () => {
     let postcssPlugin = [
-        cssnext({ browsers: ['last 1 version'] })
+        cssnext({ browsers: ['last 5 version'] })
     ];
     return gulp.src(paths.styles.src)
         .pipe(changed(paths.styles.dest))
@@ -68,10 +72,12 @@ gulp.task('devStyles', () => {
 
 gulp.task('devHtml', shell.task('node compile-html.js dev'));
 
-gulp.task('devcompile', gulp.series('devClean', gulp.parallel('devStyles', 'devMoveThirdPart'), 'devHtml'));
+// gulp.task('devcompile', gulp.series('devClean', gulp.parallel('devStyles', 'devMoveThirdPart'), 'devHtml'));
+// 取消移动第三方库, 目前转为使用CDN
+gulp.task('devcompile', gulp.series('devClean', 'devStyles', 'devHtml'));
 
 gulp.task('watch', gulp.series('devcompile', () => {
-    gulp.watch(paths.thirdParts.src, gulp.parallel('devMoveThirdPart'));
+    // gulp.watch(paths.thirdParts.src, gulp.parallel('devMoveThirdPart'));
 
     gulp.watch(paths.styles.src, gulp.parallel('devStyles'));
 
@@ -116,8 +122,14 @@ gulp.task('buildStyles', () => {
 
 gulp.task('buildMoveThirdPart', () => {
     return gulp.src(paths.thirdParts.src)
-        .pipe(gulp.dest(paths.thirdParts.build))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest(paths.thirdParts.build));
 });
 
-gulp.task('build', gulp.series('buildClean', gulp.parallel('buildStyles', 'buildMoveThirdPart'), 'buildHtml'));
+gulp.task('moveFavicon', () => {
+    return gulp.src(paths.favicon.src)
+        .pipe(gulp.dest(paths.favicon.build));
+});
+
+// gulp.task('build', gulp.series('buildClean', gulp.parallel('buildStyles', 'buildMoveThirdPart'), 'buildHtml'));
+// 取消移动第三方库, 目前转为使用CDN
+gulp.task('build', gulp.series('buildClean', 'buildStyles', gulp.parallel('buildHtml', 'moveFavicon')));

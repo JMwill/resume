@@ -52,7 +52,8 @@
     margin-left: 15%;
 
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
         background-color: #fcfdff;
         color: #0D0D0D;
     }

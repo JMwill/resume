@@ -6,7 +6,8 @@
     padding: $block-padding;
     transition: background-color .2s, color .5s;
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
         background-color: $exper-focus-bg;
         color: $exper-focus-color;
     }
@@ -59,7 +60,8 @@
     }
 }
 .exper-item:hover .exper-item__wrapper,
-.exper-item:active .exper_item__wrapper {
+.exper-item:active .exper_item__wrapper,
+.exper-item:focus .exper_item__wrapper {
     color: $base-focus-color;
 }
 .exper-item__title {

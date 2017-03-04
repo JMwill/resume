@@ -2,11 +2,12 @@
 @import '../var';
 .footer {
     color: #303030;
-    padding: p2e(48);
+    padding: p2e(16) p2e(48);
     text-align: center;
 
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
         background-color: $footer-focus-bg;
     }
 }
