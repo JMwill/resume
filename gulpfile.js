@@ -81,7 +81,7 @@ gulp.task('watch', gulp.series('devcompile', () => {
 
     gulp.watch(paths.styles.src, gulp.parallel('devStyles'));
 
-    gulp.watch('components', gulp.parallel('devHtml'));
+    gulp.watch('src/components', gulp.parallel('devHtml'));
     gulp.watch('src/dev.html', gulp.parallel('devHtml'));
     gulp.watch(`dev/${version}/index.html`)
         .on('change', reload);
