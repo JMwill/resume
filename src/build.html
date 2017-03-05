@@ -19,5 +19,24 @@
 		{{include './components/experiences'}}
         {{include './components/intros'}}
         {{include './components/footer'}}
+        <!-- 内嵌音乐 -->
+        <script>
+            window.addEventListener('DOMContentLoaded', function() {
+                var avatar = document.getElementsByClassName('profile-avatar__photo')[0];
+                avatar.addEventListener('click', function() {
+                    if (document.getElementsByClassName('music-iframe').length) { return; }
+                    var i, musicIframe = document.createElement('iframe'),
+                        attrs = {
+                            'class': 'music-iframe',
+                            'style': 'display: none;',
+                            'src': '//music.163.com/outchain/player?type=2&id=28577617&auto=1&height=66'
+                        };
+                    for (i in attrs) {
+                        musicIframe.setAttribute(i, attrs[i]);
+                    }
+                    document.body.appendChild(musicIframe);
+                });
+            });
+        </script>
     </body>
 </html>
