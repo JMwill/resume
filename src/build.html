@@ -37,6 +37,9 @@
                     document.body.appendChild(musicIframe);
                 });
             });
+
+            // test: fix CSS hover on iPhone/iPad
+            document.addEventListener('touchstart', function() {}, false);
         </script>
     </body>
 </html>
