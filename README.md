@@ -62,7 +62,7 @@ Blog: [**jmwill.github.io/blog**][blog-site]
 
   **职责**：合作开发项目，负责项目构建，基础组件的开发。\
   **技术**：Vue、Scss、Webpack
-  **收获**：通过负责项目构建代码的编写，较为深入地应用自动化构建工具 Webpack，并根据项目自身的需要进行定制，配合 gulp 构建工具使用 Uglify，图片压缩等插件，自动构建项目代码，避免人工操作带来的低效，减少人为引入错误。
+  **收获**：通过负责项目构建代码的编写，较为深入地应用自动化构建工具 Webpack，并根据项目自身的需要进行定制，配合 gulp 构建工具使用 Uglify，图片压缩等插件，自动构建项目代码，避免人工操作带来的低效，减少人为引入错误。期间总结出一套常用的 [Vue 模版][vue-template-site]用于后续的日常开发。
 
 - **多益云审批应用** 混合开发应用
 
@@ -72,7 +72,14 @@ Blog: [**jmwill.github.io/blog**][blog-site]
 
 ## 自我评价
 
+> 对新鲜事物感兴趣，喜欢编程时思想迸发的感觉。喜欢了解各种计算机相关的技术
+
+> 有较强的学习能力，对前后端技术都具有相应的了解。对互联网及计算机领域动态保持着较多的关注，有多个项目开发经验，在项目实践中，能够与团队成员进行良好的协作。
+
+> 面对压力时能够正确地处理情绪，有良好的心理素质和人生态度。
+
 [email-addr]: mailto:willsurpriseyou@foxmail.com
 [github-site]: https://github.com/JMwill
 [blog-site]: https://jmwill.github.io/blog
 [dotfile-site]: https://github.com/JMwill/dotfiles
+[vue-template-site]: https://github.com/JMwill/webpack
