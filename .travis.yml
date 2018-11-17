@@ -9,15 +9,18 @@ cache:
     - node_modules
 
 
-# S: Build Lifecycle
-install:
-  - npm i
+# START: Build Lifecycle
+before_install:
+ - npm install -g yarn
 
-#before_script:
-#  - npm install -g gulp
+install:
+  - yarn
+
+# before_script:
+#   -
 
 script:
-  - npm run build
+  - yarn run build
 
 after_script:
   - cd dist
@@ -27,12 +30,12 @@ after_script:
   - git add .
   - git commit -m "Update Resume"
   - git push --force --quiet "https://${GH_Token}@${GH_REF}" master:gh-pages
-# E: Build LifeCycle
+# END: Build LifeCycle
 
 branches:
   only:
     - master
 env:
- global:
-   - GH_REF: github.com/JMwill/resume.git
-   - secure: "Mmu/gMLGuunR6pzxvlAzu/nQqYbxQoOEH/M1u2fUxyLq8+sEWdNyVF2NYODw5i4GASgabG5Ylju7eb1Qv1ShsSC4Drve4AHESyZkvEX3pBAKkzi5kgnSZmaWgEMAFawr1ltnuYJkbDZipPibQWAY58kcdfrkPdAlc83tln059DXmnldbiOV4rfNe1/IIDYVnjCC6ZDd+LI0kc7nNy61b4XdqXqAMJ8GsAcT5XOvHTYd+Lv6w3A283gnJxIDaqkcChfnx33uDITKyNXuqUIBRZbzg/W97GXlxX9MHd+rCruEv+3fl2VW/aXivWa/bnfq6RUVKLuYsV0bBjkwIkWoOwRgx0UNMJaaFq5xTKhQvQnB5q1/td41VBhZz3QR2LF4ORdM0WjR1nBLj0igWh9knDSkNnx58ywB+4xfoqYRNOdB4yezjwxsnNNmYX9xeiq/KBZYx8ngo8Y/dCZMAh67SeYYw9B3y+yRc5ijDk3U/U3ngjDnrYhWLjNtaJ7gC2s6Q+rfZSBxRlkj5vMJkjcVKebaBWgvQexRrxCoVnoyNFFvUwDrBOpImQvie79rEeSt7VVs93xYCHzipkHS7gBlUcBSEyY7tttDhiGduf8/WHhgNnwhNGgo8iiQAYj2ossxEHlNrpAMKP3MDiHaQ3y4i4tTN2+kSAO7hSWu1Jk3hViA="
+  global:
+    - GH_REF: github.com/JMwill/resume.git
+    - secure: "Mmu/gMLGuunR6pzxvlAzu/nQqYbxQoOEH/M1u2fUxyLq8+sEWdNyVF2NYODw5i4GASgabG5Ylju7eb1Qv1ShsSC4Drve4AHESyZkvEX3pBAKkzi5kgnSZmaWgEMAFawr1ltnuYJkbDZipPibQWAY58kcdfrkPdAlc83tln059DXmnldbiOV4rfNe1/IIDYVnjCC6ZDd+LI0kc7nNy61b4XdqXqAMJ8GsAcT5XOvHTYd+Lv6w3A283gnJxIDaqkcChfnx33uDITKyNXuqUIBRZbzg/W97GXlxX9MHd+rCruEv+3fl2VW/aXivWa/bnfq6RUVKLuYsV0bBjkwIkWoOwRgx0UNMJaaFq5xTKhQvQnB5q1/td41VBhZz3QR2LF4ORdM0WjR1nBLj0igWh9knDSkNnx58ywB+4xfoqYRNOdB4yezjwxsnNNmYX9xeiq/KBZYx8ngo8Y/dCZMAh67SeYYw9B3y+yRc5ijDk3U/U3ngjDnrYhWLjNtaJ7gC2s6Q+rfZSBxRlkj5vMJkjcVKebaBWgvQexRrxCoVnoyNFFvUwDrBOpImQvie79rEeSt7VVs93xYCHzipkHS7gBlUcBSEyY7tttDhiGduf8/WHhgNnwhNGgo8iiQAYj2ossxEHlNrpAMKP3MDiHaQ3y4i4tTN2+kSAO7hSWu1Jk3hViA="
