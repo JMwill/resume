@@ -1,0 +1,13 @@
+{
+  "tmpl": "_template.html",
+  "input": "README.md",
+  "output": "dist",
+  "site": {
+    "title": "个人简历",
+    "photo": "https://avatars2.githubusercontent.com/u/11496449?v=3&s=460",
+    "description": "托管在 Github 上的在线简历",
+    "site-desc": "使用 markdown 撰写，showdown 解析，mustache 模版引擎渲染并使用 prettier 格式化的个人简历",
+    "keywords": "",
+    "google-analytics": ""
+  }
+}
