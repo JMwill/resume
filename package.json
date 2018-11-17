@@ -16,7 +16,7 @@
   "author": "JMwill",
   "license": "MIT",
   "devDependencies": {
-    "mkdirp": "^0.5.1",
+    "fs-extra": "^7.0.1",
     "mustache": "^3.0.1",
     "prettier": "1.15.2",
     "showdown": "^1.9.0"

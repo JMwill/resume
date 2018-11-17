@@ -1,29 +1,24 @@
-const fs = require('fs')
+const fs = require('fs-extra')
 const path = require('path')
-const util = require('util')
 const mustache = require('mustache')
 const showdown = require('showdown')
-const mkdirp = require('mkdirp')
 const prettier = require('prettier')
 const config = require('./config.json')
 
 const rootPath = path.join(__dirname, '../')
-const fsReadFile = util.promisify(fs.readFile)
-const fsWriteFile = util.promisify(fs.writeFile)
-const promiseMkdir = util.promisify(mkdirp)
 const converter = new showdown.Converter({simpleLineBreaks: true})
 const errLog = console.error.bind(console)
 const log = console.log.bind(console)
 
 const getTmpl = async () =>
-  await fsReadFile(path.join(rootPath, config.tmpl), 'utf8')
+  await fs.readFile(path.join(rootPath, config.tmpl), 'utf8')
 const createOutputFolder = async () =>
-  await promiseMkdir(path.join(rootPath, config.output))
+  await fs.ensureDir(path.join(rootPath, config.output))
 const getInput = async () =>
-  await fsReadFile(path.join(rootPath, config.input), 'utf8')
-
-async function main() {
-  log('!!!! compile started !!!!')
+  await fs.readFile(path.join(rootPath, config.input), 'utf8')
+const moveStyles = async () =>
+  await fs.copy(path.join(rootPath, 'styles'), path.join(rootPath, config.output, 'styles'), {overwrite: true})
+const compileToHTML = async () => {
   const input = getInput()
   const tmpl = getTmpl()
   const folder = createOutputFolder()
@@ -32,15 +27,24 @@ async function main() {
     await tmpl
     await input
     await folder
+    const content = await input.then(text => converter.makeHtml(text))
+    const html = await tmpl.then(t =>
+        mustache.render(t, Object.assign({}, config.site, {content})))
+    const prettierHtml = prettier.format(html, {parser: 'html'})
+    return prettierHtml
   } catch(e) { errLog(e) }
+}
 
-  const content = await input.then(text => converter.makeHtml(text))
-  const html = await tmpl.then(t =>
-      mustache.render(t, Object.assign({}, config.site, {content})))
-  const prettierHtml = prettier.format(html, {parser: 'html'})
-
+async function main() {
+  log('!!!! compile started !!!!')
+  const html = await compileToHTML()
   try {
-    await fsWriteFile(path.join(rootPath, config.output, 'index.html'), prettierHtml)
+    const outputPath = path.join(rootPath, config.output, 'index.html')
+    await fs.writeFile(outputPath, html)
+
+    log('!!!! move styles !!!!')
+    await moveStyles()
+    log('!!!! move finish !!!!')
   } catch(e) { errLog(e) }
   log('!!!! compile finish !!!!')
 }
