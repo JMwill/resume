@@ -1,0 +1,89 @@
+@import url('theme.css');
+
+strong {
+  /* color: #333; */
+  font-weight: 900;
+}
+
+.inner {
+  max-width: 750px;
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+
+@media only screen and (max-width: 767px) {
+  .inner {
+    font-size: 1em;
+  }
+}
+
+.inner hr {
+  margin: 3em 0;
+}
+
+header {
+  font-family: Tahoma, Arial, Helvetica, "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑", sans-serif;
+  font-weight: normal;
+}
+
+header h1,
+header h2 {
+  width: auto;
+}
+
+header a.button {
+  padding-top: 0.75em;
+  font-family: Tahoma, Arial, Helvetica, "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑", sans-serif;
+  width: auto;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  header a.button {
+    padding-top: 0.55em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header h1 {
+    margin-top: 0.25em;
+  }
+}
+
+
+#main-content {
+  float: none;
+  width: auto;
+}
+
+#main-content h1,
+#main-content h2,
+#main-content h3,
+#main-content h4 {
+  font-family: Tahoma, Arial, Helvetica, "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑", sans-serif;
+  font-weight: normal;
+}
+
+#main-content h2 {
+  font-size: 26px;
+  margin: 2em 0 0.5em;
+}
+
+#main-content h3 {
+  font-size: 22px;
+  margin: 2em 0 0.5em;
+}
+
+#main-content blockquote h1::before,
+#main-content blockquote h2::before,
+#main-content blockquote h3::before,
+#main-content blockquote h4::before,
+#main-content blockquote h5::before,
+#main-content blockquote h6::before {
+  display: none;
+}
+
+@media only screen and (min-width: 767px) {
+  header a.button {
+    background: none;
+  }
+}
