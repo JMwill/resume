@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "description": "JMwill's Resume",
   "main": "index.js",
-  "config": {
-    "port": 8000
-  },
   "scripts": {
+    "build": "node build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -17,6 +15,11 @@
   ],
   "author": "JMwill",
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+    "mkdirp": "^0.5.1",
+    "mustache": "^3.0.1",
+    "prettier": "1.15.2",
+    "showdown": "^1.9.0"
+  },
   "dependencies": {}
 }
