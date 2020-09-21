@@ -4,10 +4,10 @@
   "description": "JMwill's Resume",
   "main": "index.js",
   "scripts": {
-    "dev": "run-p serve watch",
+    "dev": "npm run compile && run-p serve watch",
     "clean": "rimraf dist",
     "serve": "serve dist",
-    "watch": "chokidar . -i 'dist' -i 'node_modules' -c 'yarn run compile'",
+    "watch": "chokidar . -i '.git' -i 'dist' -i 'node_modules' -c 'npm run compile'",
     "compile": "node scripts/build",
     "build": "run-s clean compile",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,13 +21,13 @@
   "author": "JMwill",
   "license": "MIT",
   "devDependencies": {
-    "chokidar-cli": "^1.2.3",
+    "chokidar-cli": "^2.1.0",
     "fs-extra": "^7.0.1",
     "mustache": "^3.2.1",
     "npm-run-all": "^4.1.5",
     "prettier": "1.15.2",
     "rimraf": "^2.7.1",
-    "serve": "^10.1.2",
+    "serve": "^11.3.2",
     "showdown": "^1.9.1"
   },
   "dependencies": {}
